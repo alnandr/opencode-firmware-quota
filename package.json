@@ -1,6 +1,6 @@
 {
   "name": "opencode-firmware-quota",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "OpenCode plugin for Firmware API quota monitoring - check usage, get warnings, and track your Firmware API consumption",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
