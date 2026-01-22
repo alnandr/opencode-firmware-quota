@@ -100,8 +100,7 @@ function formatQuotaMessage(info: QuotaInfo): string {
  * OpenCode plugin for Firmware API quota monitoring
  *
  * Features:
- * - firmware_quota tool: Check quota on demand
- * - /usage command: Quick quota check via slash command
+ * - firmware_quota tool: Check quota on demand via AI
  * - Auto-show quota on session start
  * - Low quota warnings when usage exceeds thresholds
  */
@@ -163,16 +162,6 @@ export const FirmwareQuotaPlugin: Plugin = async ({ client }) => {
         args: {},
         async execute() {
           return checkQuota()
-        },
-      },
-    },
-
-    // Command: /usage - Quick quota check via slash command
-    command: {
-      usage: {
-        description: "Check your Firmware API quota usage",
-        async execute() {
-          await checkQuota()
         },
       },
     },

@@ -5,7 +5,6 @@ OpenCode plugin for monitoring your [Firmware](https://firmware.ai) API quota us
 ## Features
 
 - **`firmware_quota` tool** - AI can check your quota on demand
-- **`/usage` command** - Quick quota check via slash command
 - **Auto-show on session start** - See your quota when starting a new session
 - **Low quota warnings** - Get notified when usage exceeds 75% or 90%
 
@@ -34,14 +33,6 @@ OpenCode handles secure storage of your API key. This plugin only accesses it to
 
 ## Usage
 
-### Slash Command
-
-```
-/usage
-```
-
-Shows a toast notification with your current quota usage.
-
 ### AI Tool
 
 Ask the AI to check your quota:
@@ -50,11 +41,28 @@ Ask the AI to check your quota:
 Check my Firmware quota
 ```
 
+The AI will use the `firmware_quota` tool and display your current usage.
+
 ### Automatic Notifications
 
 - **Session start**: Quota is displayed when you start a new session
 - **Low quota (75%+)**: Warning notification shown
 - **Critical quota (90%+)**: Error notification shown
+
+## Optional: /usage Slash Command
+
+If you prefer a slash command, you can create a custom command file. Note that this will go through the AI (uses tokens).
+
+Create `~/.config/opencode/commands/usage.md`:
+
+```markdown
+---
+description: Check Firmware API quota
+---
+Check my Firmware quota using the firmware_quota tool and show me the result.
+```
+
+Then use `/usage` in OpenCode to trigger it.
 
 ## License
 
