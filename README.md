@@ -20,7 +20,7 @@ Add to your `opencode.json`:
 }
 ```
 
-## Prerequisites
+## Configuration
 
 Connect your Firmware account using the `/connect` command in OpenCode:
 
@@ -29,6 +29,8 @@ Connect your Firmware account using the `/connect` command in OpenCode:
 ```
 
 Search for **Firmware** and enter your API key from [app.firmware.ai](https://app.firmware.ai).
+
+OpenCode handles secure storage of your API key. This plugin only accesses it to make direct requests to Firmware's quota API endpoint—nothing else. The code is [open-source](https://github.com/alnandr/opencode-firmware-quota) and can be reviewed to verify this.
 
 ## Usage
 
@@ -53,15 +55,6 @@ Check my Firmware quota
 - **Session start**: Quota is displayed when you start a new session
 - **Low quota (75%+)**: Warning notification shown
 - **Critical quota (90%+)**: Error notification shown
-
-## Configuration
-
-The plugin reads your Firmware API key from:
-
-1. `FIRMWARE_API_KEY` environment variable (if set)
-2. OpenCode auth storage (`~/.local/share/opencode/auth.json`)
-
-No additional configuration is required if you've connected Firmware via `/connect`.
 
 ## License
 
