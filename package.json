@@ -1,6 +1,6 @@
 {
   "name": "opencode-firmware-quota",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenCode plugin for Firmware API quota monitoring - check usage, get warnings, and track your Firmware API consumption",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,11 +21,15 @@
     "quota",
     "usage"
   ],
-  "author": "",
+  "author": "Alan Garcia",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/opencode-firmware-quota"
+    "url": "https://github.com/alnandr/opencode-firmware-quota"
+  },
+  "homepage": "https://github.com/alnandr/opencode-firmware-quota#readme",
+  "bugs": {
+    "url": "https://github.com/alnandr/opencode-firmware-quota/issues"
   },
   "devDependencies": {
     "@opencode-ai/plugin": "^1.0.0",
